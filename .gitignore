@@ -1,0 +1,10 @@
+/Script
+/TestPoPol.sln
+/.idea
+/.vs
+/DerivedDataCache
+/Intermediate
+/Saved
+/Plugins
+*.sln
+*_BuiltData.uasset
