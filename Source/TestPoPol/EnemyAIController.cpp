@@ -17,6 +17,8 @@ const FName AEnemyAIController::TargetKey(TEXT("Target"));
 AEnemyAIController::AEnemyAIController()
 {
 	
+
+
 	static ConstructorHelpers::FObjectFinder<UBlackboardData> BBObject(TEXT("/Game/AI/BB_Enemy.BB_Enemy"));
 	if (BBObject.Succeeded())
 	{

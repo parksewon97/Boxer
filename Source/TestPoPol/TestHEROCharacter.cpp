@@ -13,19 +13,20 @@
 
 
 
-
 //#include "Components/InputComponent.h"
 //GetCharacterMovement()->bOrientRotationToMovement 에 접근하기위해 
 //UCharacterMovementComponent 클래스의 전체 모양을 알 수 있어야 한다
 //그래서 헤더를 포함시켰다
 #include "GameFramework/CharacterMovementComponent.h"
 
+
 // Sets default values
 ATestHEROCharacter::ATestHEROCharacter()
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	
+	
 	
 	//컴포넌트 생성
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraSpringArm"));
@@ -70,7 +71,7 @@ ATestHEROCharacter::ATestHEROCharacter()
 		GetMesh()->SetSkeletalMesh(HEROMESH.Object);
 	}
 	
-
+	
 	
 	
 	
@@ -113,6 +114,8 @@ ATestHEROCharacter::ATestHEROCharacter()
 	AIControllerClass = AEnemyAIController::StaticClass();
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 
+
+	
 
 
 	JapDamage = 10;
@@ -193,7 +196,11 @@ void ATestHEROCharacter::ReleasedSpeedRun()
 void ATestHEROCharacter::JAB()
 {
 	UE_LOG(LogClass,Warning,TEXT("Attack"));
-
+	
+	
+	
+	
+	
 	auto AnimInstance = Cast<UHeroAnimInstance>(GetMesh()->GetAnimInstance());
 	if (nullptr == AnimInstance)return;
 	AnimInstance->PlayAttackMontage();
